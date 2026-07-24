@@ -51,3 +51,30 @@ JOIN address a
     ON c.address_id = a.address_id
 WHERE a.phone IS NULL
    OR a.phone = '';
+
+   
+#5. Display the first 10 customers alphabetically.
+select 
+	customer_id,
+    first_name,
+    last_name
+from customer
+order by first_name, last_name
+limit 10;
+
+#6. Find the customer whose name starts with A.
+select 
+	customer_id,
+    first_name,
+    last_name
+from customer
+where first_name like 'A%';
+
+#7. Find the customers whose last name ends with N.
+select 
+	customer_id,
+    first_name,
+    last_name
+from customer
+where last_name like "%n";	
+
